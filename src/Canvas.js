@@ -9,7 +9,7 @@ const Canvas = props  => {
             const canvas = canvasRef.current;
             const context = canvas.getContext('2d');
             const render = () => {
-                draw(context,props.width,props.height)
+                draw(context, props.width, props.height)
             }
             render()
         }

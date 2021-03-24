@@ -24,16 +24,22 @@ The main algorithm of generating the color is to treat each RGB color as a 32-bi
 - / public
 - /----index.html - main entry of the project  
 - / src
-- |----App.js - Wrap the Canvas component inside it and return it to the main page.
-- |----Canvas.js - Create the component which is a canvas element.
+- |----App.css - Css of the page
+- |----App.js - Wrap the Canvas component inside it and return it to the main page
+- |----Canvas.js - Create the component which is a canvas element
 - |----helper.js - Common functions
-- |----index.js - attach the App to the index.html
-- / test - unit test
+- |----index.js - Attach the App to the index.html
+- / test - Unit test
 
 ## Developing environment
 
 - node version: v14.15.3
 - npm version: 6.14.10
+
+## Version History
+
+- 1.0.1 Width selection enabled by adding dropdown
+- 1.0.0 Color generation working
 
 ## TODOs
 

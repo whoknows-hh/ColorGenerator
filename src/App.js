@@ -6,12 +6,11 @@ import './App.css';
 
 function App() {
 
-    //const blockSize = 5;   // size of each color block
     const colorStep = 8;    // step of iterator in each RGB color
     const totalBlockNumber = 32768;  // total blocks that needs to be shown
-    const [xSize, setXSize] = useState(256);
-    const [blockSize, setBlockSize] = useState(5);
-
+    const [rowSize, setRowSize] = useState(256);    // row size
+    const [blockSize, setBlockSize] = useState(5);  // block px size
+    const columnSize = totalBlockNumber / rowSize;    //column size
     /**
      * draw the image
      * @param ctx: context
@@ -45,7 +44,7 @@ function App() {
      * @param e: event
      */
     const handleWidthChange = (e)=>{
-        setXSize(e.target.value);
+        setRowSize(e.target.value);
     }
 
     /**
@@ -53,7 +52,6 @@ function App() {
      * @param e: event
      */
     const handleBlockSizeChange = (e)=>{
-        console.log(e.target.value)
         setBlockSize(parseInt(e.target.value));
     }
 
@@ -62,7 +60,7 @@ function App() {
          <h1>Color Generation</h1>
           <div className='container'>
               <span>Width:</span>
-              <select value={xSize} onChange={handleWidthChange}>
+              <select value={rowSize} onChange={handleWidthChange}>
                   <option value="32">32</option>
                   <option value="64">64</option>
                   <option value="128">128</option>
@@ -71,8 +69,8 @@ function App() {
                   <option value="1024">1024</option>
               </select>
               <span>Height:</span>
-              <select disabled={true} value={totalBlockNumber / xSize}>
-                  <option value={totalBlockNumber / xSize}>{totalBlockNumber / xSize}</option>
+              <select disabled={true} value={columnSize}>
+                  <option value={columnSize}>{columnSize}</option>
               </select>
               <span>Block Size:</span>
               <input id="range" type="range" value={blockSize} min="5" max="20" step="5" onChange={handleBlockSizeChange}/>
@@ -80,7 +78,7 @@ function App() {
           </div>
 
 
-          <Canvas draw={draw} width={xSize * blockSize} height={totalBlockNumber / xSize * blockSize}>
+          <Canvas draw={draw} width={rowSize * blockSize} height={totalBlockNumber / rowSize * blockSize}>
           </Canvas>
       </div>
   );

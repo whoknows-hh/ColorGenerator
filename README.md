@@ -17,7 +17,7 @@ It creates a component which is a canvas element that is reusable.
 
 React is used to implement this solution along with Hook. 
 
-Size of the image can be modified by selecting a width from the page. Currently, the size of each block is set to 5px * 5px.
+Size of the image can be modified by selecting a width from the page. Also, the size of the block can be modified from the slide.
 
 The main algorithm of generating the color is to treat each RGB color as a 32-bit based number and using an iterator to go across and calculate the exact RGB at the given index. This will reduce three for loops into one.
 

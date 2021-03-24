@@ -1,5 +1,7 @@
 import React from 'react';
-import Canvas from './Canvas'
+import Canvas from './Canvas';
+import { getRgbFromIndex } from './helper';
+
 
 function App() {
 
@@ -24,7 +26,7 @@ function App() {
             for (let x = 0; x < width; x ++) {
                 const colorIndex = y * width + x;
                 const {red, green, blue} = getRgbFromIndex(colorIndex, colorStep);
-                const rgb = `rgb(${red * colorStep},${green * colorStep},${blue * colorStep})`;
+                const rgb = `rgb(${red * colorStep}, ${green * colorStep}, ${blue * colorStep})`;
                 ctx.fillStyle = rgb;
                 ctx.fillRect(x * colorSize, y * colorSize, colorSize, colorSize);
 
@@ -34,20 +36,6 @@ function App() {
                 //     console.log(rgb, count);
             }
         }
-    }
-
-    /**
-     * Get Rgb Index from color Index
-     * @param index: order of the color block
-     * @param step: color step
-     * @returns {{red: number, green: number, blue: number}}
-     */
-    const getRgbFromIndex = (index, step) =>{
-        const base = 256 / step;
-        const red = Math.floor(index / Math.pow(base,2));
-        const green = Math.floor((index - red * Math.pow(base,2)) / base);
-        const blue = index - red * Math.pow(base,2) - green * base;
-        return { red, green, blue };
     }
 
     return (

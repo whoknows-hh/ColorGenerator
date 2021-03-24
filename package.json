@@ -1,5 +1,6 @@
 {
   "name": "color-generator",
+  "type": "module",
   "version": "1.0.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
@@ -18,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

@@ -15,7 +15,7 @@ Write a program which will produce an image in which each colour occurs exactly 
 I considered 3 ways of implementing this from the front-end: div, svg and canvas. I choose to use canvas since it has better performance and easy to implement. 
 It creates a component which is a canvas element that is reusable.
 
-React useEffect and useRef are used to implement this solution. 
+React is used to implement this solution along with Hook. 
 
 The main algorithm of generating the color is to treat each RGB color as a 32-bit based number and using an iterator to go across and calculate the exact RGB at the given index. This will reduce three for loops into one.
 

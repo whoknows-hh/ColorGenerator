@@ -17,6 +17,8 @@ It creates a component which is a canvas element that is reusable.
 
 React is used to implement this solution along with Hook. 
 
+Size of the image can be modified by selecting a width from the page. Currently, the size of each block is set to 5px * 5px.
+
 The main algorithm of generating the color is to treat each RGB color as a 32-bit based number and using an iterator to go across and calculate the exact RGB at the given index. This will reduce three for loops into one.
 
 ## Code structure
@@ -24,7 +26,7 @@ The main algorithm of generating the color is to treat each RGB color as a 32-bi
 - / public
 - /----index.html - main entry of the project  
 - / src
-- |----App.css - Css of the page
+- |----App.css - CSS of the page
 - |----App.js - Wrap the Canvas component inside it and return it to the main page
 - |----Canvas.js - Create the component which is a canvas element
 - |----helper.js - Common functions
@@ -34,7 +36,7 @@ The main algorithm of generating the color is to treat each RGB color as a 32-bi
 ## Developing environment
 
 - node version: v14.15.3
-- npm version: 6.14.10
+- npm version: v6.14.10
 
 ## Version History
 
@@ -43,8 +45,6 @@ The main algorithm of generating the color is to treat each RGB color as a 32-bi
 
 ## TODOs
 
-- Due to limited time, this only implemented the core logic of the color generator app. 
-- The size of the picture is semi hard-coded, this can be parametrized and pass from the page.
+- Due to limited time, this only implemented the core logic of the color generation app. 
 - Time cost of the algorithm is now O(n2), this can be optimised by using some advanced algorithm.
 - For the interview purpose, I used creat-react-app to generate the skeleton, the dependencies are too heavy. This can be optimised.
-- Other unrelated functions (e.g. css, color switch etc.) are not in the place since color generating is the main task. 

@@ -59,7 +59,7 @@ function App() {
         if (e.target.value === "Auto") {
             setAutoFit(true);
             const pageSize = document.body.clientWidth; // page size
-            let newSize = Math.floor(pageSize / blockSize);
+            const newSize = Math.floor(pageSize / blockSize);
             setRowSize(newSize);
         } else {
             setAutoFit(false);
@@ -75,7 +75,7 @@ function App() {
         const newBlockSize = e.target.value;
         if (isAutoFit) {
             const pageSize = document.body.clientWidth; // page size
-            let newSize = Math.floor(pageSize / newBlockSize);
+            const newSize = Math.floor(pageSize / newBlockSize);
             setRowSize(newSize);
         }
         setBlockSize(parseInt(newBlockSize));

@@ -1,4 +1,4 @@
-#Color Generator
+# Color Generation
 
 ## Background
 

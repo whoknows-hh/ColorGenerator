@@ -42,7 +42,7 @@ function App() {
 
                 // for testing purpose
                 count++;
-                if (count === 32768) {
+                if (count === totalBlockNumber) {
                     return;
                 }
                 // if (x === width-1 && y === height-1)

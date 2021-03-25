@@ -17,7 +17,7 @@ It creates a component which is a canvas element that is reusable.
 
 React is used to implement this solution along with Hook. 
 
-Size of the image can be modified by selecting a width from the page. Also, the size of the block can be modified from the slide.
+Size of the image can be modified by selecting a width from the page, selecting "Auto" will result in auto-calculation of the size. Also, the size of the block can be modified from the slide.
 
 The main algorithm of generating the color is to treat each RGB color as a 32-bit based number and using an iterator to go across and calculate the exact RGB at the given index. This will reduce three for loops into one.
 
@@ -31,7 +31,8 @@ The main algorithm of generating the color is to treat each RGB color as a 32-bi
 - |----Canvas.js - Create the component which is a canvas element
 - |----helper.js - Common functions
 - |----index.js - Attach the App to the index.html
-- / test - Unit test
+- / test
+- |----helper.test.js - Unit test
 
 ## Developing environment
 
@@ -40,7 +41,7 @@ The main algorithm of generating the color is to treat each RGB color as a 32-bi
 
 ## Version History
 
-- 1.0.1 Width selection enabled by adding dropdown
+- 1.0.1 Width selection and block size enabled by adding dropdown and slide
 - 1.0.0 Color generation working
 
 ## TODOs
